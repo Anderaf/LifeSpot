@@ -6,6 +6,8 @@
 
     <ItemGroup>
       <Folder Include="Static\CSS\" />
+      <Folder Include="Static\JS\" />
+      <Folder Include="Views\Shared\" />
     </ItemGroup>
 
 </Project>
