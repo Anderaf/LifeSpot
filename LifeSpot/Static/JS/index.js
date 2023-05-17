@@ -1,12 +1,24 @@
-let age = prompt("Пожалуйста, введите ваш возраст");
+let age = prompt("РџРѕР¶Р°Р»СѓР№СЃС‚Р°, РІРІРµРґРёС‚Рµ РІР°С€ РІРѕР·СЂР°СЃС‚");
 
 if (age >= 18) {
-    // Те, кто старше 18, увидят приветствие и будут направлены на сайт
-    alert("Приветствуем на LifeSpot! " + new Date().toLocaleString());
+    alert("РџСЂРёРІРµС‚СЃС‚РІСѓРµРј РЅР° LifeSpot! " + new Date().toLocaleString());
 }
 else {
-    // Выполним проверку. Если введенное число < 18, либо если введено не число -
-    // пользователь будет перенаправлен
-    alert("Наши трансляции не предназначены для лиц моложе 18 лет. Вы будете перенаправлены");
+    alert("РќР°С€Рё С‚СЂР°РЅСЃР»СЏС†РёРё РЅРµ РїСЂРµРґРЅР°Р·РЅР°С‡РµРЅС‹ РґР»СЏ Р»РёС† РјРѕР»РѕР¶Рµ 18 Р»РµС‚. Р’С‹ Р±СѓРґРµС‚Рµ РїРµСЂРµРЅР°РїСЂР°РІР»РµРЅС‹");
     window.location.href = "http://www.google.com"
+}
+function filterContent() {
+    let inputString = document.getElementsByTagName('input')[0].value;
+    let elements = document.getElementsByClassName('video-container');
+
+    for (let i = 0; i <= elements.length; i++) {
+        let videoText = elements[i].querySelector(".video-title").innerText;
+
+        if (!videoText.toLowerCase().includes(inputString.toLowerCase())) {
+            elements[i].style.display = 'none';
+        }
+        else {
+            elements[i].style.display = 'inline-block';
+        }
+    }
 }

@@ -17,7 +17,7 @@ header, footer, body, .video-container {
 .searchbar textarea {
     resize: none;
 }
-.searchbar textarea:hover {
+.searchbar input:hover {
     background-color: gray;
 }
 .searchbar {
