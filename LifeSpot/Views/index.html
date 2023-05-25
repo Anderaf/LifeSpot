@@ -4,17 +4,31 @@
     <meta charset="UTF-8">
     <title>LifeSpot</title>
     <link href="../Static/CSS/index.css" rel="stylesheet" type="text/css">
-    <script type="text/javascript" src="../Static/JS/index.js"></script>
+    <script src="../Static/JS/index.js" type="text/javascript"></script>
+    <script>
+        /*let session = handleSession();
+        sessionLog(session)*/
+        checkAge();
+        handleSession()
+        sessionLog();
+        const inputParseFunction = function () {
+            return document.getElementsByTagName('input')[0].value.toLowerCase();
+        }
+
+        setTimeout(() =>
+            alert("Нравится LifeSpot? " + '\n' + "Подпишитесь на наш Instagram @lifespot999!"),
+            30000);
+    </script>
 </head>
 <header id="header-index">
     <h1>LifeSpot - прямые трансляции с улиц</h1>
     <p>Покажем, что происходит прямо сейчас</p>
 </header>
 <body>
-    <div class="searchbar">
-        <input type="text" oninput="filterContent()" size=50%>
-    </div>
     <div class="bordered">
+        <div class="searchbar">
+            <input type="text" oninput="filterContent(document.getElementsByTagName('input')[0].value.toLowerCase())" size=50%>
+        </div>
         <div class="video-container">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/srlpC5tmhYs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <h3 class="video-title">Нью-Йорк, Брайант Парк</h3>
